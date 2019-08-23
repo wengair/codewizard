@@ -81,3 +81,15 @@
   margin-top: 20px;
   margin-right: 20px;
 }
+
+a.town_a_shop {
+  &:hover {
+    color: white
+  }
+}
+
+a.town_a_prof {
+  &:hover {
+    color: white
+  }
+}
