@@ -7,6 +7,12 @@ User.destroy_all
 # test user
 User.create!(email: "test123@gmail.com", password: "testtest")
 
+# test character
+test = Character.new(name: "Steve", gender: "male", coin: 100)
+test.user = User.first
+test.save!
+
+# levels
 Level.create!(name: "Ruby Basics I", number: 1, track: "easy")
 Level.create!(name: "Ruby Basics II", number: 2, track: "easy")
 Level.create!(name: "Flow & Arrays", number: 3, track: "easy")
@@ -87,7 +93,7 @@ Question.create!(description: "Which iterator does not returns something?", opti
 Question.create!(description: "How do you define a method that accepts a block?", options: ["Using the yield keyworld", "You can't", "Using the block keyword", "Using require_relative"], answer: "Using the yield keyworld", level: Level.all[5])
 
 # Hash & Symbols
-Question.create!(description: "How can you get all the values of a Hash in an array?", options: [".hash", ".symbol", ".hashValues", ".values"], answer: ".values", level: Level.all[5])
+Question.create!(description: "How can you get all the values of a Hash in an array?", options: [".hash", ".symbol", ".hashValues", ".values"], answer: ".values", level: Level.all[6])
 
 Question.create!(description: "Which is false about a Hash?", options: ["It has unique keys", "It is unordered", "It is made up of key-value pairs", "It has unique values"], answer: "It has unique values", level: Level.all[6])
 
@@ -95,6 +101,61 @@ Question.create!(description: "Which ruby module included in Array is also inclu
 
 Question.create!(description: "How do you read a value in a Hash?", options: ["Using it's key", ".readValue[index]", ".readValue[key]", "Using the index"], answer: "Using it's key", level: Level.all[6])
 
-Question.create!(description: "How do you create an empty Hash?", options: [" Hash.new", "Hash.create", ".hashCreate", "create_hash = 1"], answer: "Hash.new", level: Level.all[6])
+Question.create!(description: "How do you create an empty Hash?", options: ["Hash.new", "Hash.create", ".hashCreate", "create_hash = 1"], answer: "Hash.new", level: Level.all[6])
+
+# Hash & symbols II
+Question.create!(description: "How can you get all the values of a Hash in an array?", options: [".hash", ".symbol", ".hashValues", ".values"], answer: ".values", level: Level.all[7])
+
+Question.create!(description: "Which is false about a Hash?", options: ["It has unique keys", "It is unordered", "It is made up of key-value pairs", "It has unique values"], answer: "It has unique values", level: Level.all[7])
+
+Question.create!(description: "Which ruby module included in Array is also included in Hash?", options: ["Enumerable", "Enumerator", "Combined", "Numerable"], answer: "Enumerable", level: Level.all[7])
+
+Question.create!(description: "How do you read a value in a Hash?", options: ["Using it's key", ".readValue[index]", ".readValue[key]", "Using the index"], answer: "Using it's key", level: Level.all[7])
+
+Question.create!(description: "How do you create an empty Hash?", options: ["Hash.new", "Hash.create", ".hashCreate", "create_hash = 1"], answer: "Hash.new", level: Level.all[7])
+
+# OOP basics
+Question.create!(description: "Which symbol do you use to set an instance variable?", options: ["()", "$", "#", "@"], answer: "@", level: Level.all[8])
+
+Question.create!(description: "Which is the correct naming convention for a class?", options: ["SportsCar", "sportsCar", "sports_car", "sports car"], answer: "SportsCar", level: Level.all[8])
+
+Question.create!(description: "What does OOP stand for?", options: ["Oatmeal Oatmeal Pancake", "Ordered-Objective Programming", "Object-Ordered Programming", "Object-Oriented Programming"], answer: "Object-Oriented Programming", level: Level.all[8])
+
+Question.create!(description: "How do you set a getter and a setter in one line?", options: ["attr_owner", "attr_reader_writer", "attr_accessor", "attr_editor"], answer: "attr_accessor", level: Level.all[8])
+
+Question.create!(description: "What is a getter?", options: ["An instance method to read values", "An instance method to write values", "A class method to read variables", "A class method to write variables"], answer: "An instance method to read values", level: Level.all[8])
+
+# OOP basics II
+Question.create!(description: "Which is the correct naming convention for a class?", options: ["SportsCar", "sportsCar", "sports_car", "sports car"], answer: "SportsCar", level: Level.all[8])
+
+Question.create!(description: "Which symbol do you use to set an instance variable?", options: ["()", "$", "#", "@"], answer: "@", level: Level.all[8])
+
+Question.create!(description: "What does OOP stand for?", options: ["Oatmeal Oatmeal Pancake", "Ordered-Objective Programming", "Object-Ordered Programming", "Object-Oriented Programming"], answer: "Object-Oriented Programming", level: Level.all[8])
+
+Question.create!(description: "How do you set a getter and a setter in one line?", options: ["attr_owner", "attr_reader_writer", "attr_accessor", "attr_editor"], answer: "attr_accessor", level: Level.all[8])
+
+Question.create!(description: "What is a getter?", options: ["An instance method to read values", "An instance method to write values", "A class method to read variables", "A class method to write variables"], answer: "An instance method to read values", level: Level.all[8])
+
+# OOP Advanced I
+Question.create!(description: "Which symbol do you use to set an instance variable?", options: ["()", "$", "#", "@"], answer: "@", level: Level.all[8])
+
+Question.create!(description: "Which is the correct naming convention for a class?", options: ["SportsCar", "sportsCar", "sports_car", "sports car"], answer: "SportsCar", level: Level.all[8])
+
+Question.create!(description: "What does OOP stand for?", options: ["Oatmeal Oatmeal Pancake", "Ordered-Objective Programming", "Object-Ordered Programming", "Object-Oriented Programming"], answer: "Object-Oriented Programming", level: Level.all[8])
+
+Question.create!(description: "How do you set a getter and a setter in one line?", options: ["attr_owner", "attr_reader_writer", "attr_accessor", "attr_editor"], answer: "attr_accessor", level: Level.all[8])
+
+Question.create!(description: "What is a getter?", options: ["An instance method to read values", "An instance method to write values", "A class method to read variables", "A class method to write variables"], answer: "An instance method to read values", level: Level.all[8])
+
+# OOP Advanced II
+Question.create!(description: "Which symbol do you use to set an instance variable?", options: ["()", "$", "#", "@"], answer: "@", level: Level.all[8])
+
+Question.create!(description: "Which is the correct naming convention for a class?", options: ["SportsCar", "sportsCar", "sports_car", "sports car"], answer: "SportsCar", level: Level.all[8])
+
+Question.create!(description: "What does OOP stand for?", options: ["Oatmeal Oatmeal Pancake", "Ordered-Objective Programming", "Object-Ordered Programming", "Object-Oriented Programming"], answer: "Object-Oriented Programming", level: Level.all[8])
+
+Question.create!(description: "How do you set a getter and a setter in one line?", options: ["attr_owner", "attr_reader_writer", "attr_accessor", "attr_editor"], answer: "attr_accessor", level: Level.all[8])
+
+Question.create!(description: "What is a getter?", options: ["An instance method to read values", "An instance method to write values", "A class method to read variables", "A class method to write variables"], answer: "An instance method to read values", level: Level.all[8])
 
 puts "Complete!"
