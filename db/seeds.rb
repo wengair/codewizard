@@ -1,6 +1,11 @@
 BattleLog.destroy_all
 Question.destroy_all
 Level.destroy_all
+Character.destroy_all
+User.destroy_all
+
+# test user
+User.create!(email: "test123@gmail.com", password: "testtest")
 
 Level.create!(name: "Ruby Basics I", number: 1, track: "easy")
 Level.create!(name: "Ruby Basics II", number: 2, track: "easy")
