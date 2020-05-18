@@ -26,7 +26,8 @@ Battle scene
 ## Languages
 Ruby  
 HTML/CSS  
-JavaScript
+JavaScript  
+MySQL
 ## Gems/Frameworks
 Ruby on Rails  
 PostgreSQL  
